@@ -14,25 +14,32 @@
                 white-space: -o-pre-wrap;    /* Opera 7 */
                 word-wrap: break-word;       /* Internet Explorer 5.5+ */
             }
+            img.github-ribbon {
+                position: absolute;
+                top: 0;
+                right: 0;
+                border: 0;
+            }
         </style>
     </head>
   <body>
-    <a href="https://github.com/lenin-anzen/yeoman-generator">
-        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+    <a href="https://github.com/lenin-anzen/yeoman-generator" target="_blank" title="Fork me on GitHub">
+        <img class="github-ribbon" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
     </a>
     <div class="container">
 		<div class="jumbotron">
 			<h1>Yeoman Generator</h1>
 			<h3>Generadores para crear aplicaciones web con:</h3>
-			<p>Angular 1, Gulp, Webpack, ESLint, Karma</p>
+			<p>Angular 1, Gulp, Webpack, ESLint, Karma/Jasmine</p>
 			<ul>
 				<li><a href="#authoring">Generar un generador</a></li>
-				<li><a href="#"></a></li>
+				<li><a href="#methods-context">Métodos y Contexto</a></li>
+				<li><a href="#existing-generators">Generadores existentes</a></li>
 			</ul>
 		</div>
         <div class="panel panel-default" id="authoring">
             <div class="panel-heading">
-                <h3 class="panel-title"><a href="http://yeoman.io/authoring/" target="_blank" title="">Generar un generador</a></h3>
+                <h3 class="panel-title"><a href="http://yeoman.io/authoring/" target="_blank" title="Generar un generador">Generar un generador</a></h3>
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -74,88 +81,42 @@
                 </div>
             </div>
         </div>
-        <div class="panel panel-default" id="">
+        <div class="panel panel-default" id="methods-context">
             <div class="panel-heading">
-                <h3 class="panel-title"><a href="" title=""></a></h3>
+                <h3 class="panel-title"><a href="http://yeoman.io/authoring/running-context.html" target="_blank" title="Métodos y Contexto">Métodos y Contexto</a></h3>
             </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <p>Instalar globalmente <b><a href="https://github.com/webpack/webpack/tree/webpack-1" target="_blank">Webpack 1</a></b></p>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <code>npm install -g webpack@1.15.0</code>
-                            </div>
-                        </div>
+                        <ol>
+                            <li><code>initializing</code> - Your initialization methods (checking current project state, getting configs, etc)</li>
+                            <li><code>prompting</code> - Where you prompt users for options (where you'd call <code>this.prompt()</code>)</li>
+                            <li><code>configuring</code> - Saving configurations and configure the project (creating <code>.editorconfig</code> files and other metadata files)</li>
+                            <li><code>default</code> - If the method name doesn't match a priority, it will be pushed to this group.</li>
+                            <li><code>writing</code> - Where you write the generator specific files (routes, controllers, etc)</li>
+                            <li><code>conflicts</code> - Where conflicts are handled (used internally)</li>
+                            <li><code>install</code> - Where installations are run (npm, bower)</li>
+                            <li><code>end</code> - Called last, cleanup, say <em>good bye</em>, etc</li>
+                        </ol>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="panel panel-default" id="">
+        <div class="panel panel-default" id="existing-generators">
             <div class="panel-heading">
-                <h3 class="panel-title"><a href="" title=""></a></h3>
+                <h3 class="panel-title"><a href="http://yeoman.io/generators/" target="_blank" title="Generadores existentes">Generadores existentes</a></h3>
             </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-4">
-                        <code>├───angular
-│   └───templates
-├───app
-│   ├───js
-│   └───templates
-│       ├───src
-│       │   ├───js
-│       │   └───styles
-│       ├───src_old
-│       └───test
-│           └───test
-├───browsersync
-│   └───templates
-│       └───gulp_tasks
-│           └───conf
-├───documentation
-│   └───templates
-│       └───gulp_tasks
-├───eslint
-│   └───templates
-│       └───gulp_tasks
-│           └───conf
-│               ├───dev
-│               └───dist
-├───karma
-│   └───templates
-│       └───gulp_tasks
-│           └───conf
-├───package
-│   ├───js
-│   └───templates
-├───projects
-│   └───templates
-│       └───Calculator
-│           ├───src
-│           │   └───js
-│           └───test
-│               └───specs
-│                   └───js
-├───styles
-│   └───templates
-│       └───gulp_tasks
-│           └───conf
-└───webpack
-    └───templates
-        └───gulp_tasks
-            └───conf
-                ├───dev
-                └───dist</code>
+                        
                     </div>
                 </div>
             </div>
         </div>
         <div class="panel panel-default" id="">
             <div class="panel-heading">
-                <h3 class="panel-title"><a href="" title=""></a></h3>
+                <h3 class="panel-title"><a href="" target="_blank" title=""></a></h3>
             </div>
             <div class="panel-body">
                 <div class="row">

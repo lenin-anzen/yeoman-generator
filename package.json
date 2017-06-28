@@ -1,0 +1,27 @@
+{
+  "name": "yeoman-generator",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/lenin-anzen/yeoman-generator.svg?branch=master)](https://travis-ci.org/lenin-anzen/yeoman-generator)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenin-anzen/yeoman-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lenin-anzen/yeoman-generator/issues"
+  },
+  "homepage": "https://github.com/lenin-anzen/yeoman-generator#readme",
+  "devDependencies": {
+    "eslint": "^4.1.1",
+    "eslint-config-google": "^0.8.0"
+  }
+}
