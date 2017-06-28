@@ -20,6 +20,12 @@
                 right: 0;
                 border: 0;
             }
+            .language-ascii-art-noshadows {
+                display: inline-block; 
+                font-family: "Lucida Console", Monaco, monospace;
+                letter-spacing: -0.2em;
+                line-height: 0.8em;
+            }
         </style>
     </head>
   <body>
@@ -49,7 +55,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p>Instalar globalmente <b><a href="http://yeoman.io/" target="_blank">Yeoman</a></b></p>
+                        <p><strong>1.-</strong> Instalar globalmente <b><a href="http://yeoman.io/" target="_blank">Yeoman</a></b></p>
                     </div>
                     <div class="col-md-6 col-sm-6">
                         <code>npm install -g yo</code>
@@ -57,15 +63,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p>Instalar globalmente <b><a href="http://gulpjs.com/" target="_blank">Gulp</a></b></p>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <code>npm install -g gulp</code>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <p>Instalar globalmente <b><a href="https://github.com/yeoman/generator-generator" target="_blank">generator-generator</a></b></p>
+                        <p><strong>2.-</strong> Instalar globalmente <b><a href="https://github.com/yeoman/generator-generator" target="_blank">generator-generator</a></b></p>
                     </div>
                     <div class="col-md-6 col-sm-6">
                         <code>npm install -g generator-generator</code>
@@ -73,7 +71,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <p>Generar un generator</p>
+                        <p><strong>3.-</strong> Generar un generator</p>
                     </div>
                     <div class="col-md-6 col-sm-6">
                         <code>yo generator</code>
@@ -108,8 +106,60 @@
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-md-4">
-                        
+                    <div class="col-md-12">
+                        <p>Instalar el siguiente generador:</p>
+                        <ul>
+                            <li><a href="https://github.com/STUkh/generator-angular-webpack-es6" target="_blank" title="generator-angular-webpack-es6">generator-angular-webpack-es6</a></li>
+                            <li>Yeoman generator for AngularJS + Webpack with ES6 and SASS.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p><strong>1.-</strong> Instalar Yeoman y Webpack globalmente:</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <code>npm install -g yo webpack</code>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p><strong>2.-</strong> Instalar generador globalmente:</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <code>npm install -g generator-angular-webpack-es6</code>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p><strong>3.-</strong> Crear directorio y acceder a él:</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <code>mkdir awesome-project && cd awesome-project</code>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p><strong>4.-</strong> Mediante Yeoman iniciar generador:</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <code>yo angular-webpack-es6</code>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <code class="language-ascii-art-noshadows" data-lang="ascii-art-noshadows">
+     _-----_     ╭──────────────────────────╮
+    |       |    │   Welcome to the great   │
+    |--(o)--|    │    angular-webpack-es6   │
+   `---------´   │        generator!        │
+    ( _´U`_ )    ╰──────────────────────────╯
+    /___A___\   /
+     |  ~  |
+   __'.___.'__
+ ´   `  |° ´ Y `
+
+? Your application name (myNgApp) awesome-app</code>
                     </div>
                 </div>
             </div>
