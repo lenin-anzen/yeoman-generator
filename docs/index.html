@@ -21,7 +21,7 @@
                 border: 0;
             }
             .language-ascii-art-noshadows {
-                display: inline-block; 
+                display: inline-block;
                 font-family: "Lucida Console", Monaco, monospace;
                 letter-spacing: -0.2em;
                 line-height: 0.8em;
@@ -42,6 +42,7 @@
 				<li><a href="#methods-context">Métodos y Contexto</a></li>
 				<li><a href="#unit-testing">Pruebas unitarias</a></li>
 				<li><a href="#existing-generators">Generadores existentes</a></li>
+        <li><a href="#publish-generator">Publicar un generator</a></li>
 			</ul>
 		</div>
         <div class="panel panel-default" id="authoring">
@@ -155,7 +156,7 @@ mkdir test1 && cd test1
 yo test-generator</code>
                     </div>
                     <div class="col-md-12 col-sm-12">
-                        <pre class="language-ascii-art-noshadows" data-lang="ascii-art-noshadows">
+                        <pre>
      _-----_     ╭──────────────────────────╮
     |       |    │      Welcome to the      │
     |--(o)--|    │        impressive        │
@@ -300,7 +301,7 @@ yo test-generator</code>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <pre class="language-ascii-art-noshadows" data-lang="ascii-art-noshadows">
+                        <pre>
      _-----_     ╭──────────────────────────╮
     |       |    │   Welcome to the great   │
     |--(o)--|    │    angular-webpack-es6   │
@@ -316,14 +317,47 @@ yo test-generator</code>
                 </div>
             </div>
         </div>
-        <div class="panel panel-default" id="">
+        <div class="panel panel-default" id="publish-generator">
             <div class="panel-heading">
-                <h3 class="panel-title"><a href="" target="_blank" title=""></a></h3>
+                <h3 class="panel-title"><a href="http://yeoman.io/generators/" target="_blank" title="Publicar un generator">Publicar un generator</a></h3>
             </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-12">
-
+                      <h4>Público</h4>
+                      <ul>
+                          <li><p>La propiedad <strong>"name"</strong> debe tener el prefijo <strong>"generator-"</strong></p></li>
+                          <li><p>La propiedad <strong>"keywords"</strong> debe contener <strong>"yeoman-generator"</strong></p></li>
+                          <li><p>La propiedad <strong>"files"</strong> debe contener la lista de archivos usados.</p></li>
+                          <li><p>Debe tener como dependencia la última versión de <strong>"yeoman-generator"</strong></p></li>
+                      </ul>
+                      <code>{
+  "name": "generator-name",
+  "version": "0.1.0",
+  "description": "Description of the generator",
+  "files": [
+    "generators"
+  ],
+  "keywords": ["yeoman-generator"],
+  "dependencies": {
+    "yeoman-generator": "^1.0.0"
+  }
+}</code>
+                        <p>Darse de alta en: <a href="https://www.npmjs.com/signup">https://www.npmjs.com/signup</a> y publicar el paquete.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                      <h4>Privado</h4>
+                      <p><strong>1.-</strong> Clonar el repositorio donde se encuentra el generador:</p>
+                      <code>git clone https://github.com/anzen/generator-anzdig-webapps-training</code>
+                      <br><br>
+                      <p><strong>2.-</strong> Accesar e instalar dependencias:</p>
+                      <code>cd generator-anzdig-webapps-training
+npm install</code>
+                      <br><br>
+                      <p><strong>3.-</strong> Enlazar el generador a los paquetes locales de NPM:</p>
+                      <code>npm link</code>
                     </div>
                 </div>
             </div>
