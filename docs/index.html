@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Yeoman Generator</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             code {
                 white-space: pre-wrap;       /* css-3 */
@@ -25,6 +26,10 @@
                 font-family: "Lucida Console", Monaco, monospace;
                 letter-spacing: -0.2em;
                 line-height: 0.8em;
+            }
+            a[target="_blank"]:after {
+                font-family: 'FontAwesome';
+                content: " \f08e";
             }
         </style>
     </head>
@@ -76,7 +81,7 @@
                         <p><strong>3.-</strong> Crear y accesar a directorio:</p>
                     </div>
                     <div class="col-md-6 col-sm-6">
-                        <code>mkdir test-generator && cd test-generator</code>
+                        <code>mkdir anzdig-aw-es6 && cd anzdig-aw-es6</code>
                     </div>
                 </div>
                 <div class="row">
@@ -89,16 +94,16 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-                        <pre>? Your generator name generator-test-generator
-Your generator must be inside a folder named generator-test-generator
+                        <pre>? Your generator name generator-anzdig-aw-es-6
+Your generator must be inside a folder named generator-anzdig-aw-es-6
 I'll automatically create this folder.
-? Description How to generate a Generator
-? Project homepage url https://lenin-anzen.github.io/yeoman-generator/
+? Description Angular 1, webpack 2, ECMAScript 6, Babel
+? Project homepage url https://lenin-anzen.github.io/generator-anzdig-aw-es6
 ? Author's Name Lenin Meza
 ? Author's Email lmeza@anzen.com.mx
 ? Author's Homepage https://travis-ci.org/lenin-anzen
-? Package keywords (comma to split) yeoman,generator,generate
-? Send coverage reports to coveralls No
+? Package keywords (comma to split) yeoman,generator,angular,webpack,es6,babel
+? Send coverage reports to coveralls Yes
 ? GitHub username or organization lenin-anzen
 ? Which license do you want to use? MIT
    create package.json
@@ -117,7 +122,7 @@ I'll automatically create this folder.
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <p><strong>5.-</strong> Deshabilitar bower</p>
-                        <p><i>@file</i> generator-test-generator/generators/app/index.js</p>
+                        <p><i>@file</i> generator-anzdig-aw-es6/generators/app/index.js</p>
                         <p><i>@line</i> 33</p>
                     </div>
                     <div class="col-md-6 col-sm-6">
@@ -132,7 +137,7 @@ I'll automatically create this folder.
                         <p><strong>6.-</strong> Enlazar generador</p>
                     </div>
                     <div class="col-md-6 col-sm-6">
-                        <code>cd generator-test-generator
+                        <code>cd generator-anzdig-aw-es6
 npm link</code>
                     </div>
                 </div>
@@ -142,7 +147,7 @@ npm link</code>
                         <p><strong>7.-</strong> Verificar enlace:</p>
                     </div>
                     <div class="col-md-6 col-sm-6">
-                        <code>npm ls --global generator-test-generator</code>
+                        <code>npm ls --global generator-anzdig-aw-es6</code>
                     </div>
                 </div>
                 <hr>
@@ -153,14 +158,14 @@ npm link</code>
                     <div class="col-md-6 col-sm-6">
                         <code>cd ..
 mkdir test1 && cd test1
-yo test-generator</code>
+yo anzdig-aw-es6</code>
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <pre>
      _-----_     ╭──────────────────────────╮
     |       |    │      Welcome to the      │
     |--(o)--|    │        impressive        │
-   `---------´   │ generator-test-generator │
+   `---------´   │      anzdig-aw-es6       │
     ( _´U`_ )    │        generator!        │
     /___A___\   /╰──────────────────────────╯
      |  ~  |
@@ -343,7 +348,11 @@ yo test-generator</code>
     "yeoman-generator": "^1.0.0"
   }
 }</code>
-                        <p>Darse de alta en: <a href="https://www.npmjs.com/signup">https://www.npmjs.com/signup</a> y publicar el paquete.</p>
+                        <hr>
+                        <p>Debe contener un archivo llamado <strong>.yo-rc.json</strong>, el cual se considera que, en donde se encuentre, será la raíz del proyecto.</p>
+                        <hr>
+                        <p>Para más información sobre cómo publicar un paquete en NPM: <a href="https://lenin-anzen.github.io/nodejs-npm/#publish-packages">Publicación de Paquetes</a>.</p>
+                        <hr>
                     </div>
                 </div>
                 <div class="row">
